@@ -44,6 +44,7 @@ if([string]::IsNullOrWhiteSpace($outputPath)) {
     @{'command'='dotnet-new3';'CArgs'=@('mvc','-h')}
     @{'command'='dotnet-new3';'CArgs'=@('webapi','-h')}
     @{'command'='dotnet-new3';'CArgs'=@('sln','-h')}
+    @{'command'='dotnet-new3';'CArgs'=@('-l','-h')}
 )
 
 

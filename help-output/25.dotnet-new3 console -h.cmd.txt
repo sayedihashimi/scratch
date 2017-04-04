@@ -12,8 +12,7 @@ Options:
   -h|--help         Displays help for this command.
   -v|--verbose      Set the verbosity level of the command. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]
   --force           Forces content to be generated even if it would change existing files.
-
- Console Application Options:                                                                          
+                                                                           
   -f|--framework  The target framework for the project.
                   Valid values include:                             
                     netcoreapp1.0                     

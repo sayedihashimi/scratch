@@ -1,47 +1,34 @@
+.NET Template Creator
 
+xUnit Test Template
+Author: Microsoft
 
-Usage:  [options]
+Usage: dotnet new xunit [options]
 
 Options:
-  -l|--list         Lists templates containing the specified name. If no name is specified, lists all templates.
   -lang|--language  Specifies the language of the template to create.
   -n|--name         The name for the output being created. If no name is specified, the name of the current directory is used.
   -o|--output       Location to place the generated output.
   -h|--help         Displays help for this command.
-  --type            Shows a subset of the available templates. Valid values are "project", "item" or "other".
+  -v|--verbose      Set the verbosity level of the command. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]
   --force           Forces content to be generated even if it would change existing files.
 
 
-xUnit Test Project (C#)
-Author: Microsoft
-Options:                                                                                    
+xUnit Test Options:                                                                                 
   -f|--framework    The target framework for the project.                                   
-                        netcoreapp1.0    - Target netcoreapp1.0                             
-                        netcoreapp1.1    - Target netcoreapp1.1                             
-                    Default: netcoreapp1.1                                                  
+                        netcoreapp1.0                            
+                        netcoreapp1.1 
+                        netcoreapp2.0                           
+                    Default: netcoreapp2.0                                           
 
-  -p|--enable-pack  Whether or not to enable packaging (via ("dotnet pack") for the project.
-                    bool - Optional                                                         
-                    Default: false                                                          
+  -p|--enable-pack  If true, the "dotnet pack" command will be available for the project.
+                    Valid values include:
+                      True
+                      False
+                    Default: false                                                            
 
-  --skip-restore    If specified, skips the automatic restore of the project on create.     
-                    bool - Optional                                                         
-                    Default: false                                                          
-
-
-xUnit Test Project (C#)
-Author: Microsoft
-Options:                                                                                    
-  -f|--framework    The target framework for the project.                                   
-                        netcoreapp2.0    - Target netcoreapp2.0                             
-                    Default: netcoreapp2.0                                                  
-
-  -p|--enable-pack  Whether or not to enable packaging (via ("dotnet pack") for the project.
-                    bool - Optional                                                         
-                    Default: false                                                          
-
-  --skip-restore    If specified, skips the automatic restore of the project on create.     
-                    bool - Optional                                                         
-                    Default: false                                                          
-
-
+  --skip-restore  If true, skips the automatic restore of NuGet packages for the project on create.
+                  Valid values include:
+                     True
+                     False                                                    
+                  Default: false
