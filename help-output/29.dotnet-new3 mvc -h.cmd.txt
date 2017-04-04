@@ -1,20 +1,19 @@
+.NET Template Creator
 
+ASP.NET Core Web App 
+Author: Microsoft
 
-Usage:  [options]
+Usage: dotnet new mvc [options]
 
 Options:
-  -l|--list         Lists templates containing the specified name. If no name is specified, lists all templates.
   -lang|--language  Specifies the language of the template to create.
   -n|--name         The name for the output being created. If no name is specified, the name of the current directory is used.
   -o|--output       Location to place the generated output.
   -h|--help         Displays help for this command.
-  --type            Shows a subset of the available templates. Valid values are "project", "item" or "other".
+  -v|--verbose      Set the verbosity level of the command. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]
   --force           Forces content to be generated even if it would change existing files.
 
-
-ASP.NET Core Web App (C#)
-Author: Microsoft
-Options:                                                                                  
+ASP.NET Core Web App Options:                                                             
   -au|--auth           The type of authentication to use                                  
                            None          - No authentication                              
                            Individual    - Individual authentication                      
@@ -25,33 +24,13 @@ Options:
                        Default: false                                                     
 
   -f|--framework       The target framework for the project.                              
-                           netcoreapp1.0    - Target netcoreapp1.0                        
-                           netcoreapp1.1    - Target netcoreapp1.1                        
-                       Default: netcoreapp1.1                                             
-
-  --skip-restore       If specified, skips the automatic restore of the project on create.
-                       bool - Optional                                                    
-                       Default: false                                                     
-
-
-ASP.NET Core Web App (C#)
-Author: Microsoft
-Options:                                                                                  
-  -au|--auth           The type of authentication to use                                  
-                           None          - No authentication                              
-                           Individual    - Individual authentication                      
-                       Default: None                                                      
-
-  -uld|--use-local-db  Whether or not to use LocalDB instead of SQLite                    
-                       bool - Optional                                                    
-                       Default: false                                                     
-
-  -f|--framework       The target framework for the project.                              
-                           netcoreapp2.0    - Target netcoreapp2.0                        
+                           netcoreapp1.0                  
+                           netcoreapp1.1  
+                           netcoreapp2.0                  
                        Default: netcoreapp2.0                                             
 
-  --skip-restore       If specified, skips the automatic restore of the project on create.
-                       bool - Optional                                                    
-                       Default: false                                                     
-
-
+  --skip-restore  If true, skips the automatic restore of NuGet packages for the project on create.
+                  Valid values include:
+                     True
+                     False                                                    
+                  Default: false                                                  
