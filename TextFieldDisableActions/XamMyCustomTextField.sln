@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMyCustomTextField", "XamMyCustomTextField\XamMyCustomTextField.csproj", "{33CEBD28-2FCC-4A31-960E-37C804D1501A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Release|iPhone.Build.0 = Release|iPhone
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{33CEBD28-2FCC-4A31-960E-37C804D1501A}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
