@@ -9,7 +9,6 @@ namespace XamMyCustomTextField {
         public override bool CanPerform(Selector action, NSObject withSender) {
             System.Diagnostics.Debug.WriteLine($"CanPerform:    \tname= {action.Name} handle= {action.Handle}");
 
-            UIMenuController.SharedMenuController.SetMenuVisible(false, false);
             return false;
         }
     }
