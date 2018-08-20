@@ -2,9 +2,10 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var newstr = "bar";
 }
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<img src="~/images/open-file-svg-psd.png" />
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -16,7 +17,7 @@
             <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
+                    <b>@newstr</b>
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
                         Learn More
                     </a>
