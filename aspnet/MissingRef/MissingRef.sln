@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingRef", "MissingRef\MissingRef.csproj", "{AD2F4D46-7E90-4E7F-A55D-F79A54D328B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorFoo01", "RazorFoo01\RazorFoo01.csproj", "{746FAEDD-BA52-4D2E-BE57-F5C2F72E042B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD2F4D46-7E90-4E7F-A55D-F79A54D328B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2F4D46-7E90-4E7F-A55D-F79A54D328B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2F4D46-7E90-4E7F-A55D-F79A54D328B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2F4D46-7E90-4E7F-A55D-F79A54D328B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746FAEDD-BA52-4D2E-BE57-F5C2F72E042B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746FAEDD-BA52-4D2E-BE57-F5C2F72E042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746FAEDD-BA52-4D2E-BE57-F5C2F72E042B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746FAEDD-BA52-4D2E-BE57-F5C2F72E042B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
