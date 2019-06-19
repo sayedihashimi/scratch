@@ -18,10 +18,6 @@
     "WebApp1": {
       "commandName": "Project",
       "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "Foohere": "foo here!"
-      },
       "applicationUrl": "https://localhost:5002;http://localhost:5000"
     }
   }
