@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using MyMovie.Models;
 
 namespace MyMovie {
     public class Startup {
@@ -20,6 +22,9 @@ namespace MyMovie {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddRazorPages();
+
+    services.AddDbContext<MyMovie01Context>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("MyMovie01Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
