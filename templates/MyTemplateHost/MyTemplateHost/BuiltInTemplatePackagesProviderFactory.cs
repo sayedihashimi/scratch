@@ -10,9 +10,9 @@ using Microsoft.TemplateEngine.Abstractions.TemplatePackage;
 namespace MyTemplateHost;
 
 internal class BuiltInTemplatePackagesProviderFactory : ITemplatePackageProviderFactory {
-    public string DisplayName => "IDE.IntegrationTests BuiltIn";
+    public string DisplayName => "Sayedha.SampleHost BuiltIn";
 
-    public Guid Id { get; } = new Guid("{3227D09D-C1EA-48F1-A33B-1F132BFD9F01}");
+    public Guid Id { get; } = new Guid("{6717BAD2-2556-49F4-B3D6-EAB91BEB3B82}");
 
     public ITemplatePackageProvider CreateProvider(IEngineEnvironmentSettings settings) {
         return new BuiltInTemplatePackagesProvider(this, settings);
@@ -41,9 +41,9 @@ internal class BuiltInTemplatePackagesProviderFactory : ITemplatePackageProvider
             string dir = Path.GetDirectoryName(asmPath);
             string[] locations = new[]
             {
-                    Path.Combine(dir, "..", "..", "..", "..", "..", "template_feed"),
-                    Path.Combine(dir, "..", "..", "..", "..", "..", "test", "Microsoft.TemplateEngine.TestTemplates", "test_templates")
-                };
+                Path.Combine(dir, "..", "..", "..", "..", "..", "template_feed"),
+                Path.Combine(dir, "..", "..", "..", "..", "..", "test", "Microsoft.TemplateEngine.TestTemplates", "test_templates")
+            };
 
             foreach (string location in locations) {
                 if (Directory.Exists(location)) {

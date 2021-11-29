@@ -7,7 +7,7 @@ using Microsoft.TemplateEngine.Edge;
 namespace MyTemplateHost;
 
 internal static class BootstrapperFactory {
-    private const string HostIdentifier = "IDE.IntegrationTests";
+    private const string HostIdentifier = "Sayedha.SampleHost";
     private const string HostVersion = "v1.0.0";
 
     internal static Bootstrapper GetBootstrapper(IEnumerable<string> additionalVirtualLocations = null, bool loadBuiltInTemplates = false) {
