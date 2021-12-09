@@ -4,7 +4,130 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="main-content">
+    <ul>
+        <li><fast-badge fill="danger" color="dark">Danger</fast-badge></li>
+        <li><fast-button>Hello world</fast-button></li>
+        <li>
+            <fast-accordion>
+                <fast-accordion-item expanded>
+                    <span slot="heading">Panel one</span>
+                    Panel one content
+                </fast-accordion-item>
+                <fast-accordion-item>
+                    <span slot="heading">Panel two</span>
+                    Panel two content
+                </fast-accordion-item>
+                <fast-accordion-item expanded>
+                    <span slot="heading">Panel three</span>
+                    Panel three content
+                </fast-accordion-item>
+            </fast-accordion>
+        </li>
+        <li>
+            <button id="anchor">
+                Button is an anchor
+            </button>
+            <fast-anchored-region anchor="anchor"
+                                  vertical-positioning-mode="locktodefault"
+                                  vertical-default-position="top">
+                This shows up above the button
+            </fast-anchored-region>
+        </li>
+        <li>
+            <fast-breadcrumb>
+                <fast-breadcrumb-item href="#">Breadcrumb item 1</fast-breadcrumb-item>
+                <fast-breadcrumb-item href="#">Breadcrumb item 2</fast-breadcrumb-item>
+                <fast-breadcrumb-item>Breadcrumb item 3</fast-breadcrumb-item>
+            </fast-breadcrumb>
+        </li>
+        <li>
+            <fast-card>
+                <h3>Card title</h3>
+                <p>At purus lectus quis habitant commodo, cras. Aliquam malesuada velit a tortor. Felis orci tellus netus risus et ultricies augue aliquet.</p>
+                <fast-button>Learn more</fast-button>
+            </fast-card>
+        </li>
+        <li>
+            <fieldset>
+                <legend>Fruits</legend>
+                <fast-checkbox checked>Apple</fast-checkbox>
+                <fast-checkbox checked>Banana</fast-checkbox>
+                <fast-checkbox>Honeydew</fast-checkbox>
+                <fast-checkbox checked>Mango</fast-checkbox>
+            </fieldset>
+        </li>
+        <li>
+            <fast-combobox autocomplete="both">
+                <fast-option>Christopher Eccleston</fast-option>
+                <fast-option>David Tenant</fast-option>
+                <fast-option>Matt Smith</fast-option>
+                <fast-option>Peter Capaldi</fast-option>
+                <fast-option>Jodie Whittaker</fast-option>
+            </fast-combobox>
+        </li>
+        <li>
+            <fast-data-grid id="samplegrid"></fast-data-grid>
+        </li>
+        <li>
+            <button onclick="document.getElementById('example1').removeAttribute('hidden')">show dialog</button>
+            <fast-dialog id="example1" class="example-dialog" aria-label="Simple modal dialog" modal="true" hidden>
+                <h2>Dialog</h2>
+                <p>This is an example dialog.</p>
+                <fast-button onclick="document.getElementById('example1').toggleAttribute('hidden')">Close Dialog</fast-button>
+            </fast-dialog>
+        </li>
+        <li>
+            <fast-disclosure appearance="lightweight">
+                <strong slot="title">Read about FAST</strong>
+                <div>
+                    FAST is a collection of technologies built on Web Components and modern Web Standards, designed to help you efficiently tackle some of the most common challenges in website and application design and development.
+                </div>
+            </fast-disclosure>
+        </li>
+        <li>
+            <fast-horizontal-scroll>
+                <fast-card>
+                    Card number 1
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 2
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 3
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 4
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 5
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 6
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 7
+                    <fast-button>A button</fast-button>
+                </fast-card>
+                <fast-card>
+                    Card number 8
+                    <fast-button>A button</fast-button>
+                </fast-card>
+            </fast-horizontal-scroll>
+        </li>
+    </ul>
+
+    <script>
+        document.getElementById("samplegrid").rowsData = [
+            { item1: "value 1-1", item2: "value 2-1" },
+            { item1: "value 1-2", item2: "value 2-2" },
+            { item1: "value 1-3", item2: "value 2-3" },
+        ]; 
+    </script>
 </div>

@@ -1,5 +1,6 @@
-html {
+body,html {
   font-size: 14px;
+  background-color:black;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +16,29 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+:not(:defined) {
+    visibility: hidden;
+}
+
+#main-content{
+
+}
+fast-card, fieldset, fast-dialog, fast-disclosure {
+    color: white;
+}
+fast-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: var(--type-ramp-plus-5-font-size);
+    line-height: var(--type-ramp-plus-5-line-height);
+}
+
+#button {
+    align-self: flex-end;
 }
