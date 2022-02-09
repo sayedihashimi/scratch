@@ -17,7 +17,9 @@ internal static class BootstrapperFactory {
                 host.VirtualizeDirectory(virtualLocation);
             }
         }
-        return new Bootstrapper(host, virtualizeConfiguration: true, loadDefaultComponents: true);
+        var res = new Bootstrapper(host, virtualizeConfiguration: true, loadDefaultComponents: true);
+        res.LoadDefaultComponents();
+        return res;
     }
 
     private static ITemplateEngineHost CreateHost(bool loadBuiltInTemplates = false) {
@@ -31,6 +33,7 @@ internal static class BootstrapperFactory {
             builtIns.Add((typeof(ITemplatePackageProviderFactory), new BuiltInTemplatePackagesProviderFactory()));
         }
 
-        return new DefaultTemplateEngineHost(HostIdentifier + Guid.NewGuid().ToString(), HostVersion, preferences, builtIns, Array.Empty<string>());
+        var host = new DefaultTemplateEngineHost(HostIdentifier + Guid.NewGuid().ToString(), HostVersion, preferences, builtIns, Array.Empty<string>());
+        return host;
     }
 }
