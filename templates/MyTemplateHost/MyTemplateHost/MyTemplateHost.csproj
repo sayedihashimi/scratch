@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.TemplateEngine.Edge" Version="6.0.100" />
     <PackageReference Include="Microsoft.TemplateEngine.IDE" Version="6.0.100" />
     <PackageReference Include="Microsoft.TemplateEngine.Orchestrator.RunnableProjects" Version="6.0.100" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22114.1" />
   </ItemGroup>
 
 </Project>
