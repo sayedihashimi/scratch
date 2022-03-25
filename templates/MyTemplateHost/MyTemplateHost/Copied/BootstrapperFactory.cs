@@ -10,7 +10,7 @@ internal static class BootstrapperFactory {
     private const string HostIdentifier = "Sayedha.SampleHost";
     private const string HostVersion = "v1.0.0";
 
-    internal static Bootstrapper GetBootstrapper(IEnumerable<string> additionalVirtualLocations = null, bool loadBuiltInTemplates = false) {
+    internal static Bootstrapper GetBootstrapper(IEnumerable<string> additionalVirtualLocations = null, bool loadBuiltInTemplates = true) {
         ITemplateEngineHost host = CreateHost(loadBuiltInTemplates);
         if (additionalVirtualLocations != null) {
             foreach (string virtualLocation in additionalVirtualLocations) {
@@ -22,7 +22,7 @@ internal static class BootstrapperFactory {
         return res;
     }
 
-    private static ITemplateEngineHost CreateHost(bool loadBuiltInTemplates = false) {
+    private static ITemplateEngineHost CreateHost(bool loadBuiltInTemplates = true) {
         var preferences = new Dictionary<string, string>
         {
                 { "prefs:language", "C#" }
@@ -30,18 +30,16 @@ internal static class BootstrapperFactory {
 
         var builtIns = new List<(Type, IIdentifiedComponent)>();
         if (loadBuiltInTemplates) {
-            // TODO: is this needed?
-            builtIns.Add((typeof(ITemplatePackageProviderFactory), new BuiltInTemplatePackagesProviderFactory()));
 
             // from: https://github.com/dotnet/sdk/blob/60aaae761755ecbff3971733150eb79d9f10427b/src/Cli/dotnet/commands/dotnet-new/NewCommandShim.cs#L61-L86
+            // TODO: doesn't seem to be working
+            builtIns.Add((typeof(ITemplatePackageProviderFactory), new BuiltInTemplatePackagesProviderFactory()));
 
-            builtIns.Add((typeof(ITemplatePackageProviderFactory), new BuiltInTemplatePackageProviderFactory()));
-            builtIns.Add((typeof(ITemplatePackageProviderFactory), new OptionalWorkloadProviderFactory()));
+            builtIns.Add((typeof(ITemplatePackageProviderFactory), new GlobalSettingsTemplatePackageProviderFactory()));
+            // (typeof(ITemplatePackageProviderFactory), new GlobalSettingsTemplatePackageProviderFactory())
 
-            //builtIns.AddRange(Microsoft.TemplateEngine.Orchestrator.RunnableProjects.Components.AllComponents);
-            //builtIns.AddRange(Microsoft.TemplateEngine.Edge.Components.AllComponents);
-            //builtIns.AddRange(Components.AllComponents);
-            //builtIns.AddRange(Microsoft.TemplateSearch.Common.Components.AllComponents);
+            // TODO: revisit adding this later
+            // builtIns.Add((typeof(ITemplatePackageProviderFactory), new OptionalWorkloadProviderFactory()));
         }
 
         var host = new DefaultTemplateEngineHost(HostIdentifier + Guid.NewGuid().ToString(), HostVersion, preferences, builtIns, Array.Empty<string>());
