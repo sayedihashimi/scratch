@@ -35,6 +35,12 @@ class Program {
             Console.WriteLine($"\t{template.Identity}");
         }
     }
+
+    private ITemplateEngineHost CreateHost()
+    {
+        throw new NotImplementedException();
+    }
+
     private async Task InstallRemotePackage() {
         // try to install a nuget package
         using MyTemplateHost.Bootstrapper bootstrapper = BootstrapperFactory.GetBootstrapper();
