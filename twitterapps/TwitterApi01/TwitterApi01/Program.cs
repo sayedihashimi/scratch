@@ -1,5 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
-
+var config = builder.Configuration;
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,6 +34,8 @@ app.MapGet("/weatherforecast", () => {
 .WithName("GetWeatherForecast");
 
 app.Run();
+
+
 
 internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary) {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
